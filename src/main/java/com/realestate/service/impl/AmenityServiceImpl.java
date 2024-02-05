@@ -5,6 +5,7 @@ import com.realestate.repository.AmenityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -16,7 +17,7 @@ public class AmenityServiceImpl implements AmenityService {
     @Override
     public List<Amenity> getAmenitiesByPropertyId(Long propertyId) {
         // Implement logic to retrieve amenities by property ID
-        return amenityRepository.findAll();
+        return amenityRepository.findAllById(Collections.singleton(propertyId));
     }
 
     @Override

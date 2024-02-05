@@ -25,6 +25,7 @@ public class Property {
     private int bathroom;
     private boolean parking;
     private boolean isFurished;
+    private long price;
 
     // Add other fields as needed
 
