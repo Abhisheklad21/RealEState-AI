@@ -13,7 +13,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
+//http://locahost:8080/api/users/create
     @GetMapping
     public List<User> getAllUsers() {
         return userService.getAllUsers();
