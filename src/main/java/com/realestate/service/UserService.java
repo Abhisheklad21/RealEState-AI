@@ -1,6 +1,7 @@
 package com.realestate.service;
 
 import com.realestate.entity.User;
+import com.realestate.payload.UserDto;
 
 import java.util.List;
 

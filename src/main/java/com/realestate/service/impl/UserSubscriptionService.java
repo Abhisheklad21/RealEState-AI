@@ -57,9 +57,13 @@ public class UserSubscriptionService {
 
     }
 
-    public List<SubscriptionPlan> getExpiredPlans(LocalDate currentDate) {
+    public List<UserSubscription> getExpiredPlans(LocalDate currentDate) {
         // Query the repository for expired subscription plans
-        return subscriptionPlanRepository.findByExpirationDateBeforeAndExpiredFalse(currentDate);
+        return userSubscriptionRepository.findByEndDateAfter(currentDate);
+    }
+
+    public void savePlan(UserSubscription plan) {
+        userSubscriptionRepository.save(plan);
     }
 
     // Other methods as needed

@@ -6,16 +6,20 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-public class SubscriptionPlan {
+public class MapLocation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private int durationInDays; // Duration of the plan in days
-    private double price;
-    private long userId;
-    // Other fields as needed
+
+    private double latitude;
+    private double longitude;
+    private String address;
+    private String city;
+    private String state;
+    private String country;
+
+    // Constructors, getters, and setters
 }

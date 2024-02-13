@@ -5,7 +5,6 @@ package com.realestate.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -27,6 +26,7 @@ public class Property {
     private boolean isFurished;
     private long price;
 
+
     // Add other fields as needed
 
     @OneToMany(mappedBy = "property", cascade = CascadeType.ALL)
@@ -34,6 +34,10 @@ public class Property {
 
     @OneToMany(mappedBy = "property", cascade = CascadeType.ALL)
     private List<Image> images;
+    @OneToOne
+    private MapLocation mapLocation;
+
+
 
     // Getters and setters
 }

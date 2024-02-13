@@ -1,10 +1,10 @@
 package com.realestate.entity;
 
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -24,9 +24,9 @@ public class UserSubscription {
 
     private LocalDate startDate;
     private LocalDate endDate;
-    private boolean expired; // Add this property
+    private boolean expired;
 
-    // Getter and setter methods for expired property
+
     public boolean isExpired() {
         return expired;
     }

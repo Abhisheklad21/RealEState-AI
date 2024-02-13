@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface SubscriptionPlanRepository extends JpaRepository<SubscriptionPlan, Long> {
-    List<SubscriptionPlan> findByExpirationDateBeforeAndExpiredFalse(LocalDate currentDate);
+
     // Add custom query methods if needed
 }
 
